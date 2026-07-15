@@ -1,0 +1,97 @@
+name: Build APK
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    working-directory: app-weightsonar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: app-weightsonar
+
+      # Gemeinsame Bibliothek als Geschwister-Verzeichnis, wie lokal:
+      # settings.gradle.kts erwartet ../android-apps-common/android
+      - uses: actions/checkout@v4
+        with:
+          repository: castigaro/android-apps-common
+          path: android-apps-common
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Restore signing keystore
+        run: |
+          mkdir -p keystore
+          echo "$RELEASE_KEYSTORE" | base64 -d > keystore/release.jks
+        env:
+          RELEASE_KEYSTORE: ${{ secrets.RELEASE_KEYSTORE }}
+
+      - name: Unit-Tests
+        run: ./gradlew testDebugUnitTest --no-daemon
+
+      - name: Build APKs
+        run: ./gradlew assembleDebug assembleRelease --no-daemon
+        env:
+          ORG_GRADLE_PROJECT_RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+
+      - name: Rename APKs
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk "$GITHUB_WORKSPACE/weightsonar-debug.apk"
+          cp app/build/outputs/apk/release/app-release.apk "$GITHUB_WORKSPACE/weightsonar.apk"
+
+      - name: Versions-Manifest erzeugen
+        run: |
+          VERSION_CODE=$(grep -oP 'versionCode\s*=\s*\K[0-9]+' app/build.gradle.kts)
+          VERSION_NAME=$(grep -oP 'versionName\s*=\s*"\K[^"]+' app/build.gradle.kts)
+          cat > "$GITHUB_WORKSPACE/weightsonar-version.json" <<EOF
+          {
+            "versionCode": $VERSION_CODE,
+            "versionName": "$VERSION_NAME",
+            "apkUrl": "https://github.com/castigaro/app-weightsonar/releases/download/latest/weightsonar.apk"
+          }
+          EOF
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: weightsonar-apks
+          path: |
+            weightsonar.apk
+            weightsonar-debug.apk
+            weightsonar-version.json
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: WeightSonar
+          prerelease: false
+          body: |
+            Automatisch gebaute APKs von WeightSonar.
+
+            - **weightsonar.apk** — Release-Version (empfohlen).
+            - **weightsonar-debug.apk** — Debug-Version für Entwicklung/Tests.
+
+            Zum Installieren auf dem Handy: APK herunterladen, öffnen und die
+            Installation aus unbekannten Quellen erlauben. In den
+            App-Einstellungen einen Anthropic- oder OpenAI-API-Key hinterlegen.
+          files: |
+            weightsonar.apk
+            weightsonar-debug.apk
+            weightsonar-version.json

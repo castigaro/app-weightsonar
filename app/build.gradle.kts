@@ -11,11 +11,11 @@ android {
         applicationId = "com.castigaro.weightsonar"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
     }
 
-    // Keystore und Passwort kommen aus GitHub-Secrets (siehe build-weightsonar.yml).
+    // Keystore und Passwort kommen aus GitHub-Secrets (siehe build.yml).
     // Ohne beides wird die Release-Variante unsigniert gebaut.
     val releaseKeystore = rootProject.file("keystore/release.jks")
     val releaseStorePassword = project.findProperty("RELEASE_STORE_PASSWORD") as String?

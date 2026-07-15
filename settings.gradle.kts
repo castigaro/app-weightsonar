@@ -18,6 +18,6 @@ rootProject.name = "WeightSonar"
 include(":app")
 
 // Gemeinsame Bibliothek der AppSonar-Apps (Basis-Theme, Provider-Settings,
-// Update-Erkennung). Liegt im Monorepo neben apps/.
+// Update-Erkennung). Liegt als Geschwister-Repo neben diesem Repository.
 include(":common")
-project(":common").projectDir = file("../../common/android")
+project(":common").projectDir = file("../android-apps-common/android")

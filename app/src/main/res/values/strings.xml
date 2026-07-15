@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeightSonar</string>
+
+    <!-- Profil-Liste -->
+    <string name="empty_state">Noch keine Profile angelegt.\n\nTippe auf +, um ein Profil anzulegen — dann Mahlzeiten erfassen und die Tagesbilanz verfolgen.</string>
+    <string name="add_person_title">Profil anlegen</string>
+    <string name="edit_person_title">Profil bearbeiten</string>
+    <string name="person_name_hint">Name oder Kürzel</string>
+    <string name="person_sex_label">Geschlecht</string>
+    <string name="sex_male">Männlich</string>
+    <string name="sex_female">Weiblich</string>
+    <string name="person_birthdate_hint">Geburtsdatum</string>
+    <string name="person_height_hint">Größe (cm)</string>
+    <string name="person_incomplete">Bitte Name, Geburtsdatum und Größe angeben.</string>
+    <string name="delete_person">Profil löschen</string>
+    <string name="delete_person_message">„%1$s“ samt aller erfassten Tage und Fotos wirklich löschen?</string>
+    <string name="age_years">%1$d Jahre</string>
+    <string name="height_cm">%1$s cm</string>
+    <string name="weight_kg">%1$s kg</string>
+    <string name="bmi_format">BMI %1$s</string>
+    <string name="bmr_format">Grundumsatz %1$s kcal</string>
+    <string name="no_weight_yet">noch kein Gewicht erfasst</string>
+
+    <!-- Tages-Hub -->
+    <string name="today_suffix">heute</string>
+    <string name="edit_profile_hint">Antippen zum Bearbeiten des Profils.</string>
+    <string name="balance_title">Tagesbilanz</string>
+    <string name="intake_line">Aufgenommen: %1$s kcal</string>
+    <string name="budget_line">Budget: %1$s kcal (Grundumsatz %2$s + Aktivitäten %3$s)</string>
+    <string name="budget_unknown">Budget: — erst Gewicht eintragen, dann rechnet die App den Grundumsatz.</string>
+    <string name="saldo_line">Saldo: %1$s kcal — %2$s</string>
+    <string name="ampel_green_label">im Budget</string>
+    <string name="ampel_yellow_label">leicht darüber</string>
+    <string name="ampel_red_label">deutlich darüber</string>
+    <string name="ampel_none_label">ohne Bewertung</string>
+    <string name="macros_line">Fett %1$s g · KH %2$s g · Eiweiß %3$s g</string>
+    <string name="weight_line">Gewicht an diesem Tag: %1$s kg — antippen zum Ändern</string>
+    <string name="weight_missing">Gewicht: — antippen zum Eintragen</string>
+    <string name="weight_dialog_title">Gewicht eintragen</string>
+    <string name="weight_hint">Gewicht (kg)</string>
+    <string name="foods_title">Lebensmittel</string>
+    <string name="foods_empty">Noch nichts erfasst.</string>
+    <string name="activities_title">Aktivitäten</string>
+    <string name="activities_empty">Keine Aktivitäten gebucht.</string>
+    <string name="add_food">Essen erfassen</string>
+    <string name="add_activity">Aktivität buchen</string>
+    <string name="entry_edit_hint">Antippen zum Bearbeiten, langes Drücken löscht.</string>
+    <string name="delete_entry">Eintrag löschen</string>
+    <string name="delete_entry_message">„%1$s“ wirklich löschen?</string>
+    <string name="food_subtitle">%1$s g · %2$s kcal</string>
+    <string name="activity_subtitle">%1$s min · %2$s kcal</string>
+    <string name="action_calendar">Kalender</string>
+    <string name="action_stats">Auswertung</string>
+    <string name="needs_key">Zum Erfassen per Foto braucht die App einen API-Key. Bitte in den Einstellungen eintragen.</string>
+
+    <!-- Lebensmittel-Dialog -->
+    <string name="add_food_title">Lebensmittel hinzufügen</string>
+    <string name="edit_food_title">Lebensmittel bearbeiten</string>
+    <string name="food_name_hint">Bezeichnung</string>
+    <string name="food_grams_hint">Menge (g)</string>
+    <string name="grams_invalid">Bitte die gegessene Menge in Gramm angeben.</string>
+    <string name="per100g_title">Nährwerte pro 100 g</string>
+    <string name="energy_hint">Energie (kcal)</string>
+    <string name="fat_hint">Fett (g)</string>
+    <string name="saturated_hint">davon gesättigt (g)</string>
+    <string name="carbs_hint">Kohlenhydrate (g)</string>
+    <string name="sugar_hint">davon Zucker (g)</string>
+    <string name="protein_hint">Eiweiß (g)</string>
+    <string name="salt_hint">Salz (g)</string>
+    <string name="fiber_hint">Ballaststoffe (g)</string>
+    <string name="unnamed_food">Unbenanntes Lebensmittel</string>
+
+    <!-- Aktivitäts-Dialog -->
+    <string name="book_activity_title">Aktivität buchen</string>
+    <string name="edit_activity_title">Aktivität bearbeiten</string>
+    <string name="activity_name_hint">Aktivität</string>
+    <string name="activity_minutes_hint">Dauer (min)</string>
+    <string name="activity_kcal_hint">kcal pro Stunde</string>
+    <string name="estimate_ai">KI-Schätzung</string>
+    <string name="estimating">KI schätzt den Verbrauch …</string>
+    <string name="estimate_error">Schätzung fehlgeschlagen: %1$s</string>
+    <string name="activity_invalid">Bitte Aktivität, Minuten und kcal/h angeben.</string>
+
+    <!-- Erfassung per Foto -->
+    <string name="capture_title">Essen erfassen</string>
+    <string name="mode_meal">Gericht</string>
+    <string name="mode_label">Nährwerttabelle</string>
+    <string name="capture_hint_meal">Fotografiere den Teller — die KI erkennt die Lebensmittel und schätzt die Mengen.</string>
+    <string name="capture_hint_label">Fotografiere die Nährwerttabelle — die KI liest die Werte pro 100 g ab; die gegessene Menge trägst du danach ein.</string>
+    <string name="take_photo">Foto aufnehmen</string>
+    <string name="pick_photo">Aus Galerie</string>
+    <string name="add_manual">Manuell hinzufügen</string>
+    <string name="photo_preview">Fotovorschau</string>
+    <string name="analyzing_meal">Gericht wird erkannt …</string>
+    <string name="reading_label">Nährwerttabelle wird abgelesen …</string>
+    <string name="capture_ok">Erfasst: %1$d Positionen — bitte Mengen prüfen, dann speichern.</string>
+    <string name="capture_uncertain">Erfasst: %1$d Positionen, davon %2$d ⚠️ unsicher — bitte prüfen (antippen zum Korrigieren).</string>
+    <string name="items_captured">Erfasste Positionen</string>
+    <string name="items_edit_hint">Antippen zum Korrigieren, langes Drücken entfernt.</string>
+    <string name="uncertain_check">⚠️ unsicher – bitte prüfen</string>
+    <string name="analyze_error">Fehler: %1$s</string>
+    <string name="retry">Erneut</string>
+    <string name="no_items">Keine Positionen erfasst — Foto wiederholen oder manuell ergänzen.</string>
+    <string name="save_items">In den Tag übernehmen</string>
+
+    <!-- Kalender -->
+    <string name="calendar_title">Kalender</string>
+    <string name="prev_month">Voriger Monat</string>
+    <string name="next_month">Nächster Monat</string>
+    <string name="calendar_legend">🟢 im Budget · 🟡 leicht darüber · 🔴 deutlich darüber · ✕ keine Daten\nTag antippen, um ihn anzusehen oder nachzupflegen.</string>
+
+    <!-- Auswertung -->
+    <string name="stats_title">Auswertung</string>
+    <string name="range_today">Heute</string>
+    <string name="range_week">Woche</string>
+    <string name="range_month">Monat</string>
+    <string name="range_custom">Frei</string>
+    <string name="range_line">%1$s – %2$s</string>
+    <string name="days_with_data">%1$d von %2$d Tagen mit Einträgen</string>
+    <string name="ampel_counts_line">🟢 %1$d · 🟡 %2$d · 🔴 %3$d · ✕ %4$d ohne Daten</string>
+    <string name="saldo_total_line">Saldo gesamt: %1$s kcal</string>
+    <string name="activity_total_line">Aktivitäten: %1$s kcal verbrannt</string>
+    <string name="chart_kcal_title">Kalorien je Tag (Strich = Budget)</string>
+    <string name="chart_weight_title">Gewichtsverlauf (kg)</string>
+    <string name="totals_title">Summen &amp; Durchschnitte (je Tag mit Einträgen)</string>
+    <string name="value_sum_avg">Σ %1$s · Ø %2$s</string>
+    <string name="no_data_range">Keine Einträge im Zeitraum.</string>
+    <string name="export_markdown">Als Markdown exportieren</string>
+    <string name="nutrient_energy">Energie (kcal)</string>
+    <string name="nutrient_fat">Fett (g)</string>
+    <string name="nutrient_saturated">davon gesättigte Fettsäuren (g)</string>
+    <string name="nutrient_carbs">Kohlenhydrate (g)</string>
+    <string name="nutrient_sugar">davon Zucker (g)</string>
+    <string name="nutrient_protein">Eiweiß (g)</string>
+    <string name="nutrient_salt">Salz (g)</string>
+    <string name="nutrient_fiber">Ballaststoffe (g)</string>
+
+    <!-- Markdown-Vorschau -->
+    <string name="preview_title">Auswertung (Markdown)</string>
+    <string name="action_save_md">Speichern</string>
+    <string name="action_share">Teilen</string>
+    <string name="saved">Gespeichert.</string>
+    <string name="save_error">Speichern fehlgeschlagen: %1$s</string>
+    <string name="share_report">Auswertung teilen</string>
+
+    <!-- Einstellungen -->
+    <string name="title_settings">Einstellungen</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="catalog_title">Aktivitäten-Katalog</string>
+    <string name="catalog_hint">Antippen zum Bearbeiten; langes Drücken löscht eigene Einträge. Werte in kcal pro Stunde (Richtwerte bei ~75 kg).</string>
+    <string name="add_catalog_entry">Aktivität hinzufügen</string>
+    <string name="edit_catalog_entry">Aktivität bearbeiten</string>
+    <string name="catalog_kcal_format">%1$s kcal/h</string>
+    <string name="catalog_default_undeletable">Vorgegebene Einträge lassen sich bearbeiten, aber nicht löschen.</string>
+    <string name="catalog_invalid">Bitte Name und kcal/h angeben.</string>
+
+    <!-- Hilfe -->
+    <string name="title_help">Hilfe</string>
+    <string name="action_help">Hilfe</string>
+    <string name="help_intro">WeightSonar erfasst, was du isst und was du dich bewegst, und bilanziert beides gegen deinen Grundumsatz: Wie viele Kalorien und Nährwerte nimmst du pro Tag auf, bleibst du im Budget, wie entwickelt sich dein Gewicht? Keine ärztliche Beratung.</string>
+    <string name="help_persons_title">Profile</string>
+    <string name="help_persons_body">Lege pro Person ein Profil an (Name, Geschlecht, Geburtsdatum, Größe). Daraus und aus dem aktuellen Gewicht berechnet die App BMI und Grundumsatz nach Mifflin-St Jeor. Jedes Profil hat seine eigenen Tage, Gewichte und Auswertungen. Alle Daten bleiben auf dem Gerät.</string>
+    <string name="help_capture_title">Essen erfassen</string>
+    <string name="help_capture_body">„Essen erfassen“ kennt zwei Wege: Beim Gericht fotografierst du den Teller — die KI erkennt die Lebensmittel, schätzt die Menge in Gramm und liefert Nährwerte pro 100 g. Bei der Nährwerttabelle fotografierst du das Etikett — die KI liest die Werte pro 100 g ab, und du trägst die gegessene Menge ein. Nicht sicher lesbare Werte sind mit ⚠️ markiert: antippen, prüfen, korrigieren. Alles lässt sich auch komplett manuell erfassen. Gerechnet wird immer von der App selbst — die KI liefert nur die Werte.</string>
+    <string name="help_budget_title">Budget und Ampel</string>
+    <string name="help_budget_body">Das Tagesbudget ist dein Grundumsatz plus die gebuchten Aktivitäten. Aktivitäten wählst du aus dem Katalog (in den Einstellungen anpassbar) oder beschreibst sie frei — die KI schätzt auf Wunsch den Verbrauch. Die Ampel bewertet den Saldo: 🟢 im Budget, 🟡 bis 250 kcal darüber, 🔴 deutlich darüber. Trage regelmäßig dein Gewicht ein — ohne Gewicht kann die App keinen Grundumsatz rechnen.</string>
+    <string name="help_calendar_title">Kalender und Vergangenheit</string>
+    <string name="help_calendar_body">Der Kalender zeigt jeden erfassten Tag als Ampel-Quadrat; vergangene Tage ohne Daten bekommen ein ✕. Tippe einen Tag an, um ihn anzusehen oder nachzupflegen — Einträge lassen sich jederzeit ändern, auch rückwirkend.</string>
+    <string name="help_stats_title">Auswertung</string>
+    <string name="help_stats_body">Die Auswertung fasst frei wählbare Zeiträume zusammen: Kalorien je Tag gegen das Budget, Summen und Durchschnitte aller Nährwerte, verbrannte Aktivitäts-Kalorien und der Gewichtsverlauf als Kurve. „Als Markdown exportieren“ erzeugt einen Bericht, den du als Datei speichern oder teilen kannst.</string>
+    <string name="help_key_title">API-Key</string>
+    <string name="help_key_body">In den Einstellungen wählst du deinen KI-Anbieter — Anthropic (Claude) oder OpenAI (GPT) — und trägst dessen API-Key ein. Der Key wird nur lokal gespeichert; Fotos gehen ausschließlich zur Erkennung an den gewählten Anbieter. Der Kostenzähler in den Einstellungen schätzt die bisherigen KI-Kosten. Ohne Key funktioniert alles außer der Foto-Erkennung und der KI-Schätzung.</string>
+
+    <!-- Allgemein -->
+    <string name="save">Speichern</string>
+    <string name="delete">Löschen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="ok">OK</string>
+</resources>

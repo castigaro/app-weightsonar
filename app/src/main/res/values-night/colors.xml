@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hellere Beerentöne für Akzente, damit sie auf dunklem Untergrund gut
+         lesbar sind. -->
+    <color name="primary">#D98BB2</color>
+    <color name="primary_dark">#C27BA0</color>
+    <color name="secondary">#E7B6CE</color>
+    <!-- Toolbar bleibt dunkel, damit der weiße Titel darauf gut lesbar ist. -->
+    <color name="toolbar_bg">#2E1220</color>
+
+    <color name="ampel_green">#81C784</color>
+    <color name="ampel_yellow">#FFB74D</color>
+    <color name="ampel_red">#E57373</color>
+    <color name="ampel_none">#757575</color>
+
+    <color name="chart_grid">#3A3A3A</color>
+    <color name="chart_text">#BDBDBD</color>
+    <color name="chart_budget">#B0BEC5</color>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.AppSonar.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/title_help" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_intro" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_persons_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_persons_body" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_capture_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_capture_body" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_budget_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_budget_body" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_calendar_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_calendar_body" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_stats_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_stats_body" />
+
+            <TextView
+                style="@style/HelpHeading"
+                android:text="@string/help_key_title" />
+
+            <TextView
+                style="@style/HelpBody"
+                android:text="@string/help_key_body" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

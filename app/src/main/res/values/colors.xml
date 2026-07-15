@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brombeere/Pflaume: Palette der Ernährungs-Bilanz-App. Bewusst kein
+         Grün, damit die Ampel-Farben sich klar vom Theme abheben. -->
+    <color name="primary">#8A3B66</color>
+    <color name="primary_dark">#5E2545</color>
+    <color name="secondary">#C27BA0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ic_launcher_background">#5E2545</color>
+    <!-- Feste Toolbar-Farbe (im Dark-Mode überschrieben). -->
+    <color name="toolbar_bg">#8A3B66</color>
+
+    <!-- Bilanz-Ampel -->
+    <color name="ampel_green">#2E7D32</color>
+    <color name="ampel_yellow">#B26A00</color>
+    <color name="ampel_red">#C62828</color>
+    <color name="ampel_none">#9E9E9E</color>
+
+    <!-- Diagramme (Canvas-Views) -->
+    <color name="chart_grid">#DDDDDD</color>
+    <color name="chart_text">#616161</color>
+    <color name="chart_budget">#37474F</color>
+</resources>

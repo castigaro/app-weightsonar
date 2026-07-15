@@ -44,7 +44,8 @@
     <string name="activities_title">Aktivitäten</string>
     <string name="activities_empty">Keine Aktivitäten gebucht.</string>
     <string name="add_food">Essen erfassen</string>
-    <string name="add_activity">Aktivität buchen</string>
+    <!-- Kurz gehalten, damit der Button neben „Essen erfassen“ einzeilig bleibt. -->
+    <string name="add_activity">Aktivität</string>
     <string name="entry_edit_hint">Antippen zum Bearbeiten, langes Drücken löscht.</string>
     <string name="delete_entry">Eintrag löschen</string>
     <string name="delete_entry_message">„%1$s“ wirklich löschen?</string>
@@ -85,7 +86,9 @@
     <!-- Erfassung per Foto -->
     <string name="capture_title">Essen erfassen</string>
     <string name="mode_meal">Gericht</string>
-    <string name="mode_label">Nährwerttabelle</string>
+    <!-- Kurz, damit der Umschalter nicht abgeschnitten wird; der Hinweistext
+         darunter erklärt, dass die Nährwerttabelle abgelesen wird. -->
+    <string name="mode_label">Etikett</string>
     <string name="capture_hint_meal">Fotografiere den Teller — die KI erkennt die Lebensmittel und schätzt die Mengen.</string>
     <string name="capture_hint_label">Fotografiere die Nährwerttabelle — die KI liest die Werte pro 100 g ab; die gegessene Menge trägst du danach ein.</string>
     <string name="take_photo">Foto aufnehmen</string>
@@ -94,8 +97,14 @@
     <string name="photo_preview">Fotovorschau</string>
     <string name="analyzing_meal">Gericht wird erkannt …</string>
     <string name="reading_label">Nährwerttabelle wird abgelesen …</string>
-    <string name="capture_ok">Erfasst: %1$d Positionen — bitte Mengen prüfen, dann speichern.</string>
-    <string name="capture_uncertain">Erfasst: %1$d Positionen, davon %2$d ⚠️ unsicher — bitte prüfen (antippen zum Korrigieren).</string>
+    <plurals name="capture_ok">
+        <item quantity="one">Erfasst: 1 Position — bitte Menge prüfen, dann speichern.</item>
+        <item quantity="other">Erfasst: %1$d Positionen — bitte Mengen prüfen, dann speichern.</item>
+    </plurals>
+    <plurals name="capture_uncertain">
+        <item quantity="one">Erfasst: 1 Position, ⚠️ unsicher — bitte prüfen (antippen zum Korrigieren).</item>
+        <item quantity="other">Erfasst: %1$d Positionen, davon %2$d ⚠️ unsicher — bitte prüfen (antippen zum Korrigieren).</item>
+    </plurals>
     <string name="items_captured">Erfasste Positionen</string>
     <string name="items_edit_hint">Antippen zum Korrigieren, langes Drücken entfernt.</string>
     <string name="uncertain_check">⚠️ unsicher – bitte prüfen</string>
@@ -154,6 +163,8 @@
     <string name="catalog_kcal_format">%1$s kcal/h</string>
     <string name="catalog_default_undeletable">Vorgegebene Einträge lassen sich bearbeiten, aber nicht löschen.</string>
     <string name="catalog_invalid">Bitte Name und kcal/h angeben.</string>
+    <string name="catalog_duplicate">„%1$s“ gibt es schon — zum Ändern den Eintrag in der Liste antippen.</string>
+    <string name="catalog_saved">Gespeichert: „%1$s“ (%2$s kcal/h).</string>
 
     <!-- Hilfe -->
     <string name="title_help">Hilfe</string>

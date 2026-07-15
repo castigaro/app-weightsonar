@@ -174,16 +174,19 @@
 
     </androidx.core.widget.NestedScrollView>
 
+    <!-- baselineAligned=false + match_parent: bricht ein Button-Text doch
+         einmal um, bleiben beide Buttons trotzdem gleich hoch. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:padding="12dp">
 
         <Button
             android:id="@+id/buttonAddFood"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:text="@string/add_food" />
@@ -192,7 +195,7 @@
             android:id="@+id/buttonAddActivity"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="@string/add_activity" />
 

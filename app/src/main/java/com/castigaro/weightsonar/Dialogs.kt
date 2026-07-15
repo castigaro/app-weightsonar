@@ -183,8 +183,13 @@ object Dialogs {
         dialog.setOnShowListener {
             binding.inputActivityName.setSimpleItems(catalog.map { it.name }.toTypedArray())
             binding.inputActivityName.setText(name, false)
-            binding.inputActivityName.setOnItemClickListener { _, _, position, _ ->
-                binding.inputKcalPerHour.setText(editText(catalog[position].kcalPerHour))
+            // Beim Tippen filtert die Dropdown-Liste — die Position zählt dann in
+            // der gefilterten Liste, deshalb über den angezeigten Namen auflösen.
+            binding.inputActivityName.setOnItemClickListener { parent, _, position, _ ->
+                val selectedName = parent.getItemAtPosition(position) as? String
+                catalog.firstOrNull { it.name == selectedName }?.let {
+                    binding.inputKcalPerHour.setText(editText(it.kcalPerHour))
+                }
             }
             minutes?.let { if (it > 0) binding.inputMinutes.setText(it.toString()) }
             kcalPerHour?.let { if (it > 0) binding.inputKcalPerHour.setText(editText(it)) }

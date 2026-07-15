@@ -193,9 +193,11 @@ class CaptureActivity : AppCompatActivity() {
                 refreshItems()
                 val uncertain = autoItems.count { it.uncertain }
                 binding.statusText.text = if (uncertain > 0) {
-                    getString(R.string.capture_uncertain, autoItems.size, uncertain)
+                    resources.getQuantityString(
+                        R.plurals.capture_uncertain, autoItems.size, autoItems.size, uncertain)
                 } else {
-                    getString(R.string.capture_ok, autoItems.size)
+                    resources.getQuantityString(
+                        R.plurals.capture_ok, autoItems.size, autoItems.size)
                 }
                 if (autoItems.isEmpty()) {
                     binding.statusText.setText(R.string.no_items)

@@ -109,6 +109,15 @@ class SettingsActivity : AppCompatActivity() {
                     dialogBinding.estimateStatus.text = getString(R.string.catalog_invalid)
                     return@setOnClickListener
                 }
+                // Gleicher Name wie ein anderer Eintrag? Ablehnen statt Duplikat —
+                // zwei gleichnamige Aktivitäten wären im Dropdown nicht unterscheidbar.
+                val duplicate = ActivityCatalogStore.getAll(this).any {
+                    it.id != entry?.id && it.name.equals(name, ignoreCase = true)
+                }
+                if (duplicate) {
+                    dialogBinding.estimateStatus.text = getString(R.string.catalog_duplicate, name)
+                    return@setOnClickListener
+                }
                 if (entry == null) {
                     ActivityCatalogStore.add(
                         this, CatalogEntry(name = name, kcalPerHour = kcal, custom = true))
@@ -119,6 +128,13 @@ class SettingsActivity : AppCompatActivity() {
                 }
                 dialog.dismiss()
                 refreshCatalog()
+                // Der Eintrag sortiert sich alphabetisch ein und kann außerhalb des
+                // Sichtbereichs landen — deshalb ausdrücklich bestätigen.
+                Snackbar.make(
+                    binding.root,
+                    getString(R.string.catalog_saved, name, NutritionCalc.formatAmount(kcal)),
+                    Snackbar.LENGTH_LONG,
+                ).show()
             }
         }
         dialog.show()

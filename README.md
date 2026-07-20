@@ -46,3 +46,12 @@ Versions-Manifest im GitHub-Release `latest`;
 [appsonar.de](https://appsonar.de) verlinkt direkt darauf.
 Die App prüft beim Start und über „Nach Update suchen“ gegen das Manifest
 auf neue Versionen (gemeinsamer `UpdateChecker` aus `android-apps-common`).
+
+## Lizenz
+
+Copyright © 2026 Torsten Klein
+
+Dieses Projekt steht unter der **GNU Affero General Public License v3.0 oder
+später** (AGPL-3.0-or-later), siehe [LICENSE](LICENSE): Wer den Code — auch als
+Netzwerkdienst — weiterverwendet oder verändert, muss den Quellcode unter
+derselben Lizenz offenlegen. Eine kommerzielle Lizenz ist auf Anfrage möglich.

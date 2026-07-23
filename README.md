@@ -30,7 +30,7 @@ der App.
 ## Technik
 
 - Kotlin, ViewBinding, Material Components; gemeinsame Bibliothek
-  [`android-apps-common`](https://github.com/castigaro/android-apps-common)
+  [`android-apps-common`](https://github.com/appsonar/android-apps-common)
   (Theme, Toolbar, komplette Provider-/Key-Verwaltung mit
   Kostenzähler, Update-Erkennung).
 - Direkte HTTP-Anbindung (OkHttp) an Anthropic Messages API bzw. OpenAI

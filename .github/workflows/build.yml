@@ -25,7 +25,7 @@ jobs:
       # settings.gradle.kts erwartet ../android-apps-common/android
       - uses: actions/checkout@v4
         with:
-          repository: castigaro/android-apps-common
+          repository: appsonar/android-apps-common
           path: android-apps-common
 
       - uses: actions/setup-java@v4
@@ -63,7 +63,7 @@ jobs:
           {
             "versionCode": $VERSION_CODE,
             "versionName": "$VERSION_NAME",
-            "apkUrl": "https://github.com/castigaro/app-weightsonar/releases/download/latest/weightsonar.apk"
+            "apkUrl": "https://github.com/appsonar/app-weightsonar/releases/download/latest/weightsonar.apk"
           }
           EOF
 

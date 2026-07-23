@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.castigaro.weightsonar"
+    namespace = "com.appsonar.weightsonar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.castigaro.weightsonar"
+        applicationId = "com.appsonar.weightsonar"
         minSdk = 26
         targetSdk = 34
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 4
+        versionName = "1.1.0"
     }
 
     // Keystore und Passwort kommen aus GitHub-Secrets (siehe build.yml).
@@ -24,7 +24,7 @@ android {
         create("release") {
             storeFile = releaseKeystore
             storePassword = releaseStorePassword
-            keyAlias = "markdownviewer"
+            keyAlias = "appsonar"
             keyPassword = releaseStorePassword
         }
     }

@@ -120,6 +120,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val VERSION_URL =
-            "https://github.com/appsonar/app-weightsonar/releases/download/latest/weightsonar-version.json"
+            "https://github.com/castigaro/app-weightsonar/releases/download/latest/weightsonar-version.json"
     }
 }
